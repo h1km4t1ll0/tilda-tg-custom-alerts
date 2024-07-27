@@ -24,7 +24,7 @@ async def hello(request: BaseRequest):
             chat_id,
             '<b>Новая заявка на сайте.</b>\n\n'
             f'<b>Имя</b>: {data['Name'][0]}\n'
-            f'<b>Телефон</b>: +{'-'.join(
+            f'<b>Телефон</b>: +{"-".join(
                 data['Phone'][0].split()
             ).replace('(', '').replace(')', '').replace('-', '')}\n'
             f'<b>Форма</b>: {form_id_map[data['formid'][0]]}\n',
