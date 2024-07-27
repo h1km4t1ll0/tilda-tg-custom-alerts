@@ -1,6 +1,6 @@
 # ---- Base python ----
 FROM python:3.11 AS base
-RUN apt-get update
+RUN apt update
 RUN mkdir /app
 WORKDIR /app
 
