@@ -3,7 +3,7 @@ services:
     build: ./
     command: python3 main.py
     ports:
-      - "87:18390"
+      - "18390:18390"
     env_file:
       - .env
     networks:
