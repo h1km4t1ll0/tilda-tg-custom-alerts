@@ -1,0 +1,18 @@
+services:
+  tilda-tg-bot:
+    build: ./
+    command: python3 main.py
+    ports:
+      - "87:18390"
+    env_file:
+      - .env
+    networks:
+      tg-bot-nw:
+        aliases:
+          - tg-bot
+
+networks:
+  tg-bot-nw:
+  share:
+    driver:
+      bridge
